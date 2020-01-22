@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Mukta:300,400,700");
 .tooltip,
-.container__sources:before,
-.container__build:before,
-.container__deploy:before {
+.container__column:before,
+.container__stack:before,
+.container__single:before,
+.heading {
   position: absolute;
   right: 0;
   bottom: 100%;
@@ -14,8 +15,8 @@
   border-radius: 2.5px;
 }
 .card,
-.container__sources div,
-.container__build div {
+.container__column div,
+.container__stack div {
   line-height: 2;
   background: #fff;
   padding: 1.2rem 1rem;
@@ -57,50 +58,48 @@ body {
 h3 {
   font-size: 1.1rem;
   color: #411fb2;
+  text-align: center;
 }
 p {
   font-size: 0.95rem;
   font-weight: 300;
+  text-align: center;
 }
-.container__sources {
+
+.title {
+  padding-bottom: 5rem;
+  font-size: 3rem;
+}
+.container__column {
   display: flex;
   border-radius: 8px;
   padding: 1.5rem;
   background: #f9f9f9;
   position: relative;
 }
-.container__sources:before {
-  content: 'data sources';
-}
-.container__sources div {
+.container__column div {
   text-align: left;
   margin: 0 1rem;
 }
-.container__build {
-  padding: 10vh 10vw;
+.container__stack {
+  padding: 5vh 5vw;
   border-radius: 8px;
   background: #f9f9f9;
   position: relative;
 }
-.container__build:before {
-  content: 'build';
-}
-.container__build div {
+.container__stack div {
   margin: 2rem 0;
 }
-.container__build div svg {
+.container__stack div svg {
   width: 4rem;
   height: auto;
   fill: #5f39dd;
 }
-.container__deploy {
+.container__single {
   background: #f9f9f9;
   padding: 1.5rem;
   border-radius: 8px;
   position: relative;
-}
-.container__deploy:before {
-  content: 'deploy';
 }
 @media (max-width: 700px) {
   .container__sources {
@@ -141,4 +140,56 @@ p {
   to {
     stroke-dashoffset: -5rem;
   }
+}
+/* Container Specific Formats */
+
+.container__authentication h3 {
+  letter-spacing: 0.1rem;
+}
+
+/* Content */
+
+.container__API:before{
+  content: 'API Management';
+}
+
+
+.container__oauth:before {
+  content: 'OAuth';
+}
+
+.container__authentication:before {
+  content: 'Authentication';
+}
+
+.container__accessControl:before {
+  content: 'Access Control';
+}
+
+.container__presentation:before {
+  content: 'Presentation';
+}
+
+.container__moderatedResources:before {
+  content: 'Moderated Resources';
+}
+
+.container__OBPModels:before {
+  content: 'OBP Models';
+}
+
+.container__resourceAccess:before {
+  content: 'Resource Access';
+}
+
+.container__monitoring:before {
+  content: 'Monitoring';
+}
+
+.container__adapters:before {
+  content: 'Adapters';
+}
+
+.container__dataServices:before {
+  content: 'Data & Services';
 }

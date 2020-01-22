@@ -4,62 +4,120 @@
 </head>
 
 <body>
-  <!-- in a wrapping section include different containers for each step of the flow: data sources, build, deploy -->
 <section class="container">
+  <h1 class='title'> Banking Architecture Overview </h1>
+  <div class="container__column container__API">
 
-  <!-- in the sources container show three cards, side by side, or one atop the other on smaller viewports -->
-  <div class="container__sources">
-
-    <div class="sources--cms">
-      <h3>CMSs</h3>
-      <p>Contentful, Drupal, WordPress, etc.</p>
+    <div>
+      <h3>3rd Party<br /> Developer Access</h3>
     </div>
 
-    <div class="sources--markdown">
-      <h3>Markdown</h3>
-      <p>Documentation, Posts, etc.</p>
+    <div>
+      <h3>Application <br /> Access</h3>
     </div>
 
-    <div class="sources--data">
-      <h3>Data</h3>
-      <p>APIs, Databases, YAML, JSON, CSV, etc.</p>
+    <div>
+      <h3>API <br /> Documentation</h3>
     </div>
-
   </div>
+  <svg viewbox="0 0 10 100"><line x1="5" x2="5" y1="0" y2="100"/></svg>
 
-  <!-- include a simple line to divide the container, and animate it to show a connection between the different containers  -->
+  <div class="container__single container__authentication">
+    <h3>OAuth1 · OAuth2 · Gateway · Direct</h3>
+  </div>
   <svg viewbox="0 0 10 100">
     <line x1="5" x2="5" y1="0" y2="100"/>
   </svg>
 
+  <div class="container__stack container__oauth">
+    <div class="build--stack">Bank Login</div>
+    <div class="build--stack">OAuth Server</div>
+    <div class="build--stack">Authentication Connector</div>
+  </div>
+  <svg viewbox="0 0 10 100">
+    <line x1="5" x2="5" y1="0" y2="100"/>
+  </svg>
 
-  <!-- in the build container show two cards, atop of one another and the first of one showing an SVG icon -->
-  <div class="container__build">
+  <div class="container__column container__accessControl">
+    <div>User & App Authorization</div>
+    <div>Views</div>
+    <div>Roles</div>
+    <div>Entitlements</div>
+    <div>Rate Limits</div>
+  </div>
+  <svg viewbox="0 0 10 100">
+    <line x1="5" x2="5" y1="0" y2="100"/>
+  </svg>
 
-    <div class="build--powered">
+  <div class="container__single container__presentation">
+    <h3>REST+ JSON: OBP and other standards.</h3>
+  </div>
+  <svg viewbox="0 0 10 100">
+    <line x1="5" x2="5" y1="0" y2="100"/>
+  </svg>
+
+  <div class="container__single container__moderatedResources">
+    <h3>Moderated Core Banking Resources + Metadata.</h3>
+  </div>
+  <svg viewbox="0 0 10 100">
+    <line x1="5" x2="5" y1="0" y2="100"/>
+  </svg>
+
+  <div class="container__column container__OBPModels">
+    <div>
+      <h3>Core Banking</h3>
+      <p>Customers, Accounts, Transactions, Payments...</p>
+    </div>
+    <div>
+      <h3>Metadata</h3>
+      <p>Tags,Comments, GeoTags, URLs...</p></div>
+    <div>
+      <h3>Authorization</h3>
+      <p>Users, Entitlements, Views,Roles</p>
+    </div>
+    <div>
+      <h3>API</h3>
+      <p>Consumes, Logs, Metrics, Docs, WebHooks</p>
+    </div>
+  </div>
+  <svg viewbox="0 0 10 100">
+    <line x1="5" x2="5" y1="0" y2="100"/>
+  </svg>
+
+  <div class="container__stack container__resourceAccess">
+    <h3>Connectors</h3>
+    <div>
       <svg viewbox="0 0 100 100">
         <circle cx="50" cy="50" r="50"/>
       </svg>
-      <p>powered by</p>
-      <h3>GraphQL</h3>
+      <p>Message Queue</p>
+    </div>
+    <div>
+        JDBC · REST · SOAP · HTTP
     </div>
 
-    <div class="build--stack">
-        HTML · CSS · React
-    </div>
+    <div>Cache</div>
+    <div>Search</div>
+    <div>WebHooks</div>
 
   </div>
 
-  <!-- repeat the svg line to connect the second and third containers as well -->
   <svg viewbox="0 0 10 100">
     <line x1="5" x2="5" y1="0" y2="100"/>
   </svg>
 
-  <!-- in the deploy container show simply text, without a wrapping card -->
-  <div class="container__deploy">
-    <h3>Static Web Host</h3>
-    <p>Amazon S3, Netlify, GitHub Pages, Surge.sh, Aerobatic, Now.sh, & many more.</p>
+  <div class="container__column container__adapters">
+    <div><h3>Core Banking Adapter</h3></div>
+    <div><h3>OBP Storage</h3></div>
+    <div><h3>Auth Adapter</h3></div>
   </div>
-
+  <svg viewbox="0 0 10 100">
+    <line x1="5" x2="5" y1="0" y2="100"/>
+  </svg>
+  <div class="container__column container__dataServices">
+    <div><h3>Core Banking System / Main Frame</h3></div>
+    <div><h3>OBP Data(RDBMS, NoSQL)</h3></div>
+    <div><h3>Bank Authentication</h3></div>
+  </div>
 </section>
 </body>
